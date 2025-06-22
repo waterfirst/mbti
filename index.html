@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 성격 유형 검사</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MBTI 성격 유형 검사</h1>
+            <p>솔직하게 질문에 답하여 당신의 마이어스-브릭스 성격 유형을 알아보세요.</p>
+        </header>
+
+        <div id="test-container">
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <div id="question-counter">질문 <span id="current-question">1</span> / <span id="total-questions">20</span></div>
+            
+            <div id="question-card">
+                <h2 id="question-text"></h2>
+                <div id="answer-options">
+                    <button class="answer-btn" data-value="strongly-disagree">매우 동의하지 않음</button>
+                    <button class="answer-btn" data-value="disagree">동의하지 않음</button>
+                    <button class="answer-btn" data-value="neutral">보통</button>
+                    <button class="answer-btn" data-value="agree">동의함</button>
+                    <button class="answer-btn" data-value="strongly-agree">매우 동의함</button>
+                </div>
+            </div>
+
+            <div id="navigation">
+                <button id="prev-btn" disabled>이전</button>
+                <button id="next-btn" disabled>다음</button>
+                <button id="submit-btn" style="display: none;">결과 보기</button>
+            </div>
+        </div>
+
+        <div id="results-container" style="display: none;">
+            <h2>당신의 MBTI 성격 유형</h2>
+            <div id="personality-type"></div>
+            <div id="personality-description"></div>
+            <div id="traits-breakdown"></div>
+            <button id="restart-btn">다시 검사하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
